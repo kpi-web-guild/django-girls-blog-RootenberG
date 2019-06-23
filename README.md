@@ -1,1 +1,0 @@
-# django-girls-blog-RootenberG
