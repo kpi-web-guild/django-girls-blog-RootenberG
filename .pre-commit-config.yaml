@@ -1,0 +1,39 @@
+repos:
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v1.2.3
+  hooks:
+  - id: no-commit-to-branch
+  - id: trailing-whitespace
+  - id: check-merge-conflict
+  - id: double-quote-string-fixer
+  - id: requirements-txt-fixer
+  - id: check-yaml
+  - id: check-docstring-first
+  - id: end-of-file-fixer
+  - id: name-tests-test
+  - id: check-ast
+  - id: debug-statements
+  - id: flake8
+- repo: https://github.com/asottile/add-trailing-comma
+  rev: v1.3.0
+  hooks:
+  - id: add-trailing-comma
+- repo: https://github.com/Lucas-C/pre-commit-hooks
+  sha: v1.1.6
+  hooks:
+  - id: remove-tabs
+- repo: git://github.com/chewse/pre-commit-mirrors-pydocstyle
+  sha: v2.1.1
+  hooks:
+  - id: pydocstyle
+    name: Verifying PEP257 Compliance
+    entry: pydocstyle
+    language: python
+    files: \.py$
+- repo: local
+  hooks:
+  - id: pylint
+    name: pylint
+    entry: python -m pylint.__main__
+    language: system
+    types: [python]
