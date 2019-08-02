@@ -1,0 +1,23 @@
+# Basic .gitattributes for a python repo.
+
+# Source files
+# ============
+*.pxd        text=auto eol=lf
+*.py         text=auto eol=lf
+*.py3         text=auto eol=lf
+*.pyw         text=auto eol=lf
+*.pyx          text=auto eol=lf
+
+# Binary files
+# ============
+*.db        binary
+*.p         binary
+*.pkl         binary
+*.pyc         binary
+*.pyd        binary
+*.pyo         binary
+
+# Note: .db, .p, and .pkl files are associated
+# with the python modules ``pickle``, ``dbm.*``,
+# ``shelve``, ``marshal``, ``anydbm``, & ``bsddb``
+# (among others).
