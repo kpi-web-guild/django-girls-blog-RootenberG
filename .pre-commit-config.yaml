@@ -33,3 +33,5 @@ repos:
     entry: python3 -m pylint
     language: system
     types: [python]
+    args:
+    - --good-names=urlpatterns
