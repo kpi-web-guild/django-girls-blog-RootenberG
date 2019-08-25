@@ -14,6 +14,7 @@ repos:
   - id: check-ast
   - id: debug-statements
   - id: flake8
+    exclude: blog/migrations/
 - repo: https://github.com/asottile/add-trailing-comma
   rev: v1.3.0
   hooks:
@@ -26,6 +27,7 @@ repos:
   rev: v2.1.1
   hooks:
   - id: pydocstyle
+    exclude: blog/migrations/
 - repo: local
   hooks:
   - id: pylint
@@ -35,3 +37,4 @@ repos:
     types: [python]
     args:
     - --good-names=urlpatterns
+    exclude: blog/migrations/
